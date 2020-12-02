@@ -6,7 +6,7 @@ Script to Install Docker CE and compose on Debian/Ubuntu/CentOS and  install  Nv
 
 #### 1. Download or clone:
 ```shell
-git clone https://github.com/whoszus/Install-docker-ce-docker-compose.git
+git clone https://github.com/Lin-Dada/Install-docker-ce-docker-compose.git
 ```
 
 #### 2. Set permission:
