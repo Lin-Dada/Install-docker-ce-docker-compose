@@ -18,10 +18,12 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 apt-get update && apt-get install -y nvidia-container-toolkit;
 systemctl restart docker;
 
-# docker build . -t nvidia-tk:1.0.3;
+docker build . -t nvidia-lindada:1.0.3;
 
-# docker run -d  --restart==always --name=GPU-2-10022 -P --gpus '"device=1"' nvidia-tk:1.0.3
+docker run -d -v /root:/data --restart==always --name=GPU-2-10022 -p 9876:22 --gpus '"device=1"' nvidia-lindada:1.0.3
 
-echo "172.169.8.254 tinker.siat.ac.cn" >> /etc/hosts;
-mkdir -p /etc/docker/certs.d/tinker.siat.ac.cn && cd /etc/docker/certs.d/tinker.siat.ac.cn && \
-wget http://tinker.siat.ac.cn:10000/files/shares/ca.crt --no-check-certificate;
+# set cert to pull private images, don't need
+
+# echo "172.169.8.254 tinker.siat.ac.cn" >> /etc/hosts;
+# mkdir -p /etc/docker/certs.d/tinker.siat.ac.cn && cd /etc/docker/certs.d/tinker.siat.ac.cn && \
+# wget http://tinker.siat.ac.cn:10000/files/shares/ca.crt --no-check-certificate;
