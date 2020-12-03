@@ -11,7 +11,7 @@ git clone https://github.com/Lin-Dada/Install-docker-ce-docker-compose.git
 
 #### 2. Set permission:
 ```shell
-cd Install-docker-ce-docker-compose && chmod +x *.sh
+cd Install-docker-ce-docker-compose/GPU-Env && chmod +x *.sh
 ```
 
 #### 3. Run script:
