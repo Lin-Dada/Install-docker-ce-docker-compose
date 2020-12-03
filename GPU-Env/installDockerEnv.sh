@@ -20,7 +20,7 @@ systemctl restart docker;
 
 docker build . -t nvidia-lindada:1.0.3;
 
-docker run -d -v /root:/data --restart==always --name=GPU-1 -p 9876:22 --gpus '"device=1"' nvidia-lindada:1.0.3
+docker run -d -v /data:/root --restart==always --name=GPU-1 -p 9876:22 --gpus '"device=1"' nvidia-lindada:1.0.3
 
 # set cert to pull private images, don't need
 
